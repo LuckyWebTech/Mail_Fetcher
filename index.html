@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>call for help</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/fontawesome.min.css">
+</head>
+<body>
+
+  <!-- start button -->
+  <div class="start">
+    <button class="start_btn">Start</button>
+  </div>
+
+  <!-- user infor conpoment -->
+  <div class="user_infor">
+    <h2>Hello!</h2>
+    <div class="input_field">
+      <input type="text" placeholder="Name?" id="nameField">
+      <input type="email" placeholder="email?" id="emailField">
+    </div>
+    <button class="next_btn" id="userInforBtn"><i class="fas fa-angle-right"></i></button>
+    <button class="back_btn" id="userInforBackBtn"><i class="fas fa-angle-left"></i></button>
+  </div>
+
+  <!-- question component -->
+  <div class="question">
+    <p class="username"></p>
+    <p>what best defines you?</p>
+    <br>
+    <div class="options">
+      <div class="option_1"> 
+        <input type="checkbox" id="student">
+        <p>A Student?</p>
+      </div>
+      <div class="option_2">
+        <input type="checkbox" id="business">
+        <p>A Business Person?</p>
+      </div>
+    </div>
+    <button class="next_btn" id="questionBtn"><i class="fas fa-angle-right"></i></button>
+    <button class="back_btn" id="questionBackBtn"><i class="fas fa-angle-left"></i></button>
+  </div>
+
+  <!-- challenges -->
+  <div class="challenges">
+    <p>As a <span class="ocupation"></span></p>
+    <p>what had been your biggest challenges?</p>
+   <div class="input_field">
+    <textarea placeholder="Your Challenges?" id="challField"></textarea>
+   </div>
+   <button class="next_btn" id="challBtn"><i class="fas fa-angle-right"></i></button>
+    <button class="back_btn" id="challBackBtn"><i class="fas fa-angle-left"></i></button>
+  </div>
+
+  <!-- solution to challenges  -->
+  <div class="solution">
+    <p><span class="username"></span> what do you think can end all your challenges?</p>
+    <div class="input_field">
+      <textarea type="text" id="soluField" placeholder="what can end these challenges?"></textarea>
+    </div>
+    <button class="next_btn" id="solutionBtn"><i class="fas fa-angle-right"></i></button>
+    <button class="back_btn" id="soluBackBtn"><i class="fas fa-angle-left"></i></button>
+  </div>
+
+  <!-- prevew before submiting -->
+  <div class="preview">
+    <h2>Preview</h2>
+    <p>Name: <br> <span class="username"></span></p>
+    <p>Email: <br> <span class="previewEmail"></span></p>
+    <p>Ocupation: <br> <span class="previewOcup"></span></p>
+    <p>Challenges: <br> <span class="previewChall"></span></p>
+    <p>These can end my Challenges: <br> <span class="soluToChall"></span></p>
+    <button class="next_btn submitBtn" id="submitButton">Submit</button>
+    <button class="back_btn" id="previewBackBtn"><i class="fas fa-angle-left"></i></button>
+  </div>
+
+  <!-- submit  -->
+  <div class="submit">
+    <form action="https://formsubmit.co/goodluckchiemeria4@gmail.com" method="POST">
+			<input type="hidden" name="_next" value="https://luckycodeseasytuts.github.io/Thank-you-page/">
+			<input type="hidden" name="_captcha" value="false">
+
+		    <input type="text" name="username" id="nameSum" placeholder="username" required>
+		    <input type="email" name="email" id="emailSum" placeholder="email" required>
+		    <input type="text" name="ocupation" id="ocupaSum" placeholder="ocupation" required>
+		    <input type="text" name="challenges" id="challSum" placeholder="challenges" required>
+		    <input type="text" name="solution" id="soluSum" placeholder="solution" required>
+		    <input type="submit" id="finalSubmission" value="Subscribe">
+		</form>
+  </div>
+
+<!-- linking js  -->
+<script src="script.js"></script>
+</body>
+</html>

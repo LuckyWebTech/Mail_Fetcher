@@ -1,0 +1,292 @@
+/* importing font  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  padding: 0px;
+  margin: 0;
+}
+
+:root{
+  --white: #fff;
+  --black: #42455a;
+  --darkblue: #a438cc;
+  --lightgrey: #d3d3d3;
+  --grey: grey;
+}
+
+body{
+  background: var(--darkblue);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* centralizing all requied components */
+.start_btn,
+.user_infor,
+.question,
+.challenges,
+.solution,
+.submit{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* all components with borderradius */
+.start_btn,
+.user_infor,
+.user_infor .input_field input,
+.question,
+.challenges,
+textarea,
+.solution,
+.preview,
+.thanks_container{
+  border-radius: 5px;
+}
+
+/* start button styling  */
+.start_btn{
+  padding: 20px 40px;
+  background: var(--white);
+  color: var(--black);
+  border: none;
+  outline: none;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all ease-in-out 0.1s;
+}
+
+.start_btn:hover{
+  padding: 19px 39px;
+}
+
+.start_btn.hide{
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* user infor styling  */
+.user_infor{
+  padding: 30px 30px 60px 30px;
+  background: var(--white);
+  width: 400px;
+  height: 180px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all ease-in-out 0.1s;
+}
+
+.user_infor.active{
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.user_infor h2{
+  font-size: 25px;
+  color: var(--black);
+}
+
+.user_infor .input_field input{
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid var(--grey);
+  outline: none;
+  font-size: 17px;
+}
+
+.next_btn{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 12px;
+  right: 30px;
+  background: linear-gradient(to top right, var(--darkblue), var(--darkblue), var(--lightgrey));
+  outline: none;
+  border: none;
+  color: var(--white);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.next_btn:hover{
+  height: 41px;
+  width: 41px;
+}
+
+.back_btn{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 12px;
+  left: 30px;
+  outline: none;
+  border: 1px solid var(--darkblue);
+  color: var(--darkblue);
+  font-size: 20px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+
+
+.back_btn:hover{
+  height: 41px;
+  width: 41px;
+  background: linear-gradient(to top right, var(--darkblue), var(--darkblue), var(--lightgrey));
+  color: var(--white);
+  opacity: 1;
+  border: none;
+}
+
+/* question styling */
+.question{
+  background:var(--white);
+  width: 400px;
+  padding: 30px 30px 60px 30px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.question.active{
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.question p{
+  font-size: 22px;
+  color: var(--black);
+}
+
+.question .options{
+  margin: 12px 0;
+}
+
+.question .options .option_1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.question .options .option_2{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.question .options input{
+  margin-right: 12px;
+}
+
+/* challenges styling  */
+.challenges{
+  background: var(--white);
+  padding: 30px 30px 60px 30px;
+  width: 400px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.challenges.active{
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.challenges p{
+  font-size: 22px;
+}
+
+.challenges .input_field{
+  padding: 12px 0;
+}
+
+.challenges .input_field textarea{
+  width: 100%;
+  height: 200px;
+  resize: none;
+  font-size: 19px;
+  padding: 12px;
+  border: 1px solid var(--grey);
+  outline: none;
+}
+
+/* solution to challenges  */
+.solution{
+  width: 400px;
+  background: var(--white);
+  padding: 30px 30px 60px 30px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.solution.active{
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.solution p{
+  font-size: 22px;
+}
+
+.solution .input_field{
+  padding: 12px 0;
+}
+
+.solution .input_field textarea{
+  width: 100%;
+  height: 200px;
+  resize: none;
+  font-size: 19px;
+  padding: 12px;
+  border: 1px solid var(--grey);
+  outline: none;
+}
+
+/* preview styling  */
+
+.preview{
+  position: relative;
+  background: var(--white);
+  padding: 30px 30px 60px 30px;
+  width: 70%;
+  margin: 30px auto;
+  opacity: 0;
+  pointer-events: none;
+  color: var(--black);
+}
+
+.preview.active{
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.preview h2{
+  text-align: center;
+  font-size: 30px;
+}
+
+.preview p{
+  font-size: 22px;
+  margin: 12px 0;
+  border-bottom: 1px solid var(--lightgrey);
+  padding: 12px 0;
+  font-weight: bold;
+}
+
+.preview span{
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+.preview .submitBtn{
+  border-radius: 10px;
+  width: 100px;
+}
+
+.submit{
+  pointer-events: none;
+  opacity: 0;
+}
