@@ -325,6 +325,27 @@ textarea,
   opacity: 0;
 }
 
+/* footer section styling  */
+
+footer{
+  padding: 5px;
+  border-top: 1px solid var(--lightgrey);
+  display: grid;
+  place-items: center;
+  color: var(--white);
+  font-size: 20px;
+
+
+}
+
+footer a{
+  color: var(--lightgrey);
+}
+
+footer .fab{
+  margin: 0 7px;
+}
+
 /* Responsive Styling  */
 @media only screen and (max-width: 586px) {
   .start{
