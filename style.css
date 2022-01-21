@@ -19,7 +19,7 @@ body{
 }
 
 /* centralizing all requied components */
-.start_btn,
+.start,
 .user_infor,
 .question,
 .challenges,
@@ -45,8 +45,33 @@ textarea,
 }
 
 /* start button styling  */
+.start{
+  padding: 30px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.start.hide{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.start .message{
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.start .message p{
+  height: 70px;
+}
+
 .start_btn{
+  margin-left: 50%;
+  transform: translate(-50%);
   padding: 20px 40px;
+  width: 200px;
   background: var(--white);
   color: var(--black);
   border: none;
@@ -54,15 +79,11 @@ textarea,
   font-size: 25px;
   cursor: pointer;
   transition: all ease-in-out 0.1s;
+  margin-top: 12px;
 }
 
 .start_btn:hover{
-  padding: 19px 39px;
-}
-
-.start_btn.hide{
-  opacity: 0;
-  pointer-events: none;
+  background: #eee;
 }
 
 /* user infor styling  */
@@ -153,6 +174,10 @@ textarea,
 .question.active{
   opacity: 1;
   pointer-events: visible;
+}
+
+.question p:nth-child(1){
+  font-weight: bold;
 }
 
 .question p{
@@ -263,6 +288,10 @@ textarea,
   pointer-events: visible;
 }
 
+#previewEmail{
+  font-size: 20%;
+}
+
 .preview h2{
   text-align: center;
   font-size: 30px;
@@ -274,6 +303,11 @@ textarea,
   border-bottom: 1px solid var(--lightgrey);
   padding: 12px 0;
   font-weight: bold;
+  text-align: justify;
+}
+
+.preview p:nth-child(6) {
+  text-align: left;
 }
 
 .preview span{
@@ -289,4 +323,94 @@ textarea,
 .submit{
   pointer-events: none;
   opacity: 0;
+}
+
+/* Responsive Styling  */
+@media only screen and (max-width: 586px) {
+  .start{
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .start{
+    width: 290px;
+  }
+
+  .start .message{
+    font-size: 17px;
+  }
+
+  .start .start_btn{
+    padding: 20px;
+    width: 120px;
+    font-size: 17px;
+  }
+
+  .user_infor,
+  .question,
+  .challenges,
+  .solution{
+    width: 300px;
+  }
+
+  .question p:nth-child(1){
+    font-size: 22px;
+  }
+  
+  .question p{
+    font-size: 19px;
+    color: var(--black);
+  }
+
+  .challenges p{
+    font-size: 19px;
+  }
+
+  .solution p{
+    font-size: 19px;
+  }
+
+  .preview h2{
+    font-size: 25px;
+  }
+
+  .preview p{
+    font-size: 19px;
+  }
+
+  .preview span{
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .user_infor,
+  .question,
+  .challenges,
+  .solution{
+    padding: 20px 20px 60px 20px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .start{
+    width: 220px;
+  }
+
+  .user_infor,
+  .question,
+  .challenges,
+  .solution{
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .user_infor,
+  .question,
+  .challenges,
+  .solution{
+    width: 200px;
+  }
 }

@@ -1,6 +1,7 @@
 // getting all neccessary elements 
 
 // all containers 
+let start = document.querySelector('.start');
 let userInfor = document.querySelector('.user_infor');
 let question = document.querySelector('.question');
 let challenges = document.querySelector('.challenges');
@@ -54,9 +55,8 @@ let business = document.querySelector('#business');
 
 // start button function 
 let startButtonf = () => {
-  startButton.classList.add('hide');
+  start.classList.add('hide');
   userInfor.classList.add('active');
-  startButton.style.padding = '30px 50px';
 };
 
 startButton.addEventListener('click', () => {
@@ -85,8 +85,7 @@ userInforBtn.addEventListener('click', () => {
 
 userInforBackBtn.addEventListener('click', () => {
   userInfor.classList.remove('active');
-  startButton.classList.remove('hide');
-  startButton.style.padding = '20px 40px';
+  start.classList.remove('hide');
 });
 
 // question button validate function 
@@ -187,4 +186,11 @@ prevSubmitButton.addEventListener('click', () => {
   setTimeout(() => {
     finalSubmissionButton.click();
   }, 4000);
+});
+
+var typed = new Typed("#typingText", {
+  strings: ["to ask you some questions", "to offer you some help", "you to tell us your challenges", "to help you solve your problems", "to end your worries"],
+  typeSpeed: 100,
+  backSpeed: 60,
+  loop: true
 });
