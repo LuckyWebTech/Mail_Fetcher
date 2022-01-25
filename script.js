@@ -53,6 +53,53 @@ let soluToChall = document.querySelector('.soluToChall');
 let student = document.querySelector('#student');
 let business = document.querySelector('#business');
 
+// loader bars 
+let load = document.querySelectorAll('#load');
+
+// loader function 
+let divLoop = () => {
+  load[0].onclick = () => {
+      load[0].classList.toggle('display');
+  };
+  load[1].onclick = () => {
+      load[1].classList.toggle('display');
+  };
+  load[2].onclick = () => {
+      load[2].classList.toggle('display');
+  };
+  load[3].onclick = () => {
+      load[3].classList.toggle('display');
+  };
+  load[4].onclick = () => {
+      load[4].classList.toggle('display');
+  };
+
+  load[5].onclick = () => {
+      load[5].classList.toggle('display');
+  };
+};
+
+let divClick = () => {
+  setTimeout(()=>{
+      load[0].click();
+  },50);
+  setTimeout(()=>{
+      load[1].click();
+  }, 100);
+  setTimeout(()=>{
+      load[2].click();
+  },150);
+  setTimeout(()=>{
+      load[3].click();
+  },200);
+  setTimeout(()=>{
+      load[4].click();
+  },250);
+  setTimeout(()=>{
+      load[5].click();
+  },300);
+};
+
 // start button function 
 let startButtonf = () => {
   start.classList.add('hide');
@@ -179,6 +226,15 @@ let getAllData = () => {
 };
 
 prevSubmitButton.addEventListener('click', () => {
+  setTimeout(() => {
+    setInterval(() => {
+      let loader = document.querySelector('.loader_container');
+      loader.classList.add('active');
+      divLoop();
+      divClick();
+    }, 400);
+  }, 0000);
+
   setTimeout(() => {
       getAllData();
   }, 2000);
