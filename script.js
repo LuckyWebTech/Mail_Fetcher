@@ -55,6 +55,8 @@ let business = document.querySelector('#business');
 
 // loader bars 
 let load = document.querySelectorAll('#load');
+// loader container
+let loader = document.querySelector('.loader_container');
 
 // loader function 
 let divLoop = () => {
@@ -226,14 +228,17 @@ let getAllData = () => {
 };
 
 prevSubmitButton.addEventListener('click', () => {
+  let loaderStart = setInterval(() => {
+    loader.classList.add('active');
+    divLoop();
+    divClick();
+  }, 400);
+  
   setTimeout(() => {
-    setInterval(() => {
-      let loader = document.querySelector('.loader_container');
-      loader.classList.add('active');
-      divLoop();
-      divClick();
-    }, 400);
-  }, 0000);
+    clearInterval(loaderStart);
+    loader.classList.remove('active');
+  }, 4000);
+
 
   setTimeout(() => {
       getAllData();
